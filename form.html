@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link href="./style.css" rel="stylesheet">
+</head>
+<body>
+    <header><strong>WELCOME</strong></header>
+    
+    <section class="box">
+    <form method="post" id="form">
+        <section id="box3">
+        <label for="dt" id="lab"><strong>Personal Details</strong></label>
+        <br><br>
+        <input type="text" class="lay" id="fname" placeholder="Full Name">
+        <br><br>
+        <input type="number" class="lay" id="age" placeholder="Age">
+        <br><br>
+        <input type="number" class="lay" id="pnum" placeholder="Phone no."max=10>
+        <br><br>
+        <label for="DOB">DOB : </label>
+        <input type="date" class="lay" id="dob" id="DOB">
+        <br><br> 
+        
+        <label for="gender">Gender</label>
+        <select name="Gender" class="lay" id="gender">
+            <option value="Select"></option>
+            <option value="Male">Male</option>
+            <option value="Male">Female</option>
+        </select><br><br>
+
+        <input type="checkbox"><label>keep this information</label>
+        <br><br>
+        
+        
+        <button type="button" class="lay" id="submit">Submit</button>
+       
+
+    </section>
+    </form>
+    </section>
+
+
+<script>
+  
+    document.getElementById("submit").onclick=function(){
+        let fname=document.getElementById("fname").value;
+        let age=document.getElementById("age").value;
+        let pnum=document.getElementById("pnum").value;
+        let dob=document.getElementById("dob").value;
+        let gender=document.getElementById("gender").value;
+
+    valid = true
+    if (fname=="")
+    {
+        alert ("Full name is required");
+        valid = false;
+    }
+    if (age=="")
+    {
+        alert ("Age is required");
+        valid = false;
+    }
+    if (pnum=="")
+    {
+        alert ("Phone no. is required");
+        valid = false;
+    }
+    if (dob=="")
+    {
+        alert ("DOB is required");
+        valid = false;
+    }
+    if (gender=="Select")
+    {
+        alert ("Gender is required");
+        valid = false;
+    }
+    if (valid)
+    {
+        alert ("Submission Success!");
+    }
+    
+}
+
+</script>
+
+</body>
+</html>
